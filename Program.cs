@@ -1,3 +1,4 @@
+using ConcertKanban.DBContext;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -10,6 +11,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddEntityFrameworkNpgsql()
+    .AddDbContext<KanbanContext>(options =>
+    options.UseNpgsql("Host=tuffi.db.elephantsql.com;Port=5432;Database=rxdjczzp;User Id=rxdjczzp;Password=RMammICvle6fYW2eF6RzFR7cI80CglBd;"));
 
 var app = builder.Build();
 
