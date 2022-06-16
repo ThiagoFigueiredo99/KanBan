@@ -2,8 +2,8 @@
 {
     public enum Status : int
     {
-        AFazer = 0,
-        EmAndamento = 1,
-        Concluido = 2
+        To_do = 0,
+        In_Progress = 1,
+        Concluded = 2
     }
 }
